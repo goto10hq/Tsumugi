@@ -14,7 +14,7 @@ namespace Tsumugi
         private static readonly Lazy<string> _queue = new Lazy<string>(() => CloudConfigurationManager.GetSetting("Tsumugi.Queue"));
         private static readonly Lazy<string> _channel = new Lazy<string>(() => CloudConfigurationManager.GetSetting("Tsumugi.Channel"));
         private static readonly Lazy<string> _emoji = new Lazy<string>(() => CloudConfigurationManager.GetSetting("Tsumugi.Emoji"));
-        private static readonly Lazy<string> _botName = new Lazy<string>(() => CloudConfigurationManager.GetSetting("Tsumugi.BotName"));
+        private static readonly Lazy<string> _bot = new Lazy<string>(() => CloudConfigurationManager.GetSetting("Tsumugi.Bot"));
         private static readonly Lazy<QueueClient> _queueClient = new Lazy<QueueClient>(() => QueueClient.CreateFromConnectionString(_connection.Value, _queue.Value));
 
         public Action<Exception> ErrorHandler { get; set; }
@@ -33,7 +33,7 @@ namespace Tsumugi
 
         public bool Send(string message)
         {
-            var notification = new Notification(_channel.Value, _emoji.Value, _botName.Value, message);
+            var notification = new Notification(_channel.Value, _emoji.Value, _bot.Value, message);
             return SendHelper(notification);
         }
 
@@ -45,7 +45,7 @@ namespace Tsumugi
 
         public async Task<bool> SendAsync(string message)
         {
-            var notification = new Notification(_channel.Value, _emoji.Value, _botName.Value, message);
+            var notification = new Notification(_channel.Value, _emoji.Value, _bot.Value, message);
             return await SendHelperAsync(notification);
         }
 
