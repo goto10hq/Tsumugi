@@ -11,24 +11,21 @@ namespace Tsumugi
         [JsonProperty("emoji")]
         public string Emoji { get; set; }
 
-        [JsonProperty("botName")]
-        public string BotName { get; set; }
+        [JsonProperty("bot")]
+        public string Bot { get; set; }
 
         [JsonProperty("message")]
         public string Message { get; set; }
-
-        [JsonProperty("created")]
-        public DateTime Created { get; set; } = DateTime.Now;
-
+        
         public Notification()
         {            
         }
 
-        public Notification(string channel, string emoji, string botName, string message)
+        public Notification(string channel, string emoji, string bot, string message)
         {
             Channel = channel;
             Emoji = emoji;
-            BotName = botName;
+            Bot = bot;
             Message = message;
         }
     }
