@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +26,10 @@ namespace Tsumugi
         public Bus()
         {            
         }
-
-        public bool Send(string channel, string emoji, string botName, string message)
+        
+        public bool Send(string channel, string emoji, string botName, string message, IEnumerable<Attachment> attachments = null)
         {
-            var notification = new Notification(channel, emoji, botName, message);
+            var notification = new Notification(channel, emoji, botName, message) { Attachments = attachments };
             return SendHelper(notification);
         }
 
@@ -37,9 +39,9 @@ namespace Tsumugi
             return SendHelper(notification);
         }
 
-        public async Task<bool> SendAsync(string channel, string emoji, string botName, string message)
+        public async Task<bool> SendAsync(string channel, string emoji, string botName, string message, IEnumerable<Attachment> attachments = null)
         {
-            var notification = new Notification(channel, emoji, botName, message);
+            var notification = new Notification(channel, emoji, botName, message) { Attachments = attachments };
             return await SendHelperAsync(notification);
         }
 

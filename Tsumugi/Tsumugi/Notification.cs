@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Tsumugi
@@ -16,7 +17,10 @@ namespace Tsumugi
 
         [JsonProperty("message")]
         public string Message { get; set; }
-        
+
+        [JsonProperty("attachments")]
+        public IEnumerable<Attachment> Attachments;
+
         public Notification()
         {            
         }
