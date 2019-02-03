@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsumugi", "Tsumugi\Tsumugi.csproj", "{5231E516-87F8-42BB-AF7F-5FD1C0BAC531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{9D63E398-DF47-4CF4-821C-1F98CEB19D7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5231E516-87F8-42BB-AF7F-5FD1C0BAC531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5231E516-87F8-42BB-AF7F-5FD1C0BAC531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5231E516-87F8-42BB-AF7F-5FD1C0BAC531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5231E516-87F8-42BB-AF7F-5FD1C0BAC531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D63E398-DF47-4CF4-821C-1F98CEB19D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D63E398-DF47-4CF4-821C-1F98CEB19D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D63E398-DF47-4CF4-821C-1F98CEB19D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D63E398-DF47-4CF4-821C-1F98CEB19D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4FB5160-AA3C-4FF3-BC93-50C7FCF46B4C}
+	EndGlobalSection
+EndGlobal
